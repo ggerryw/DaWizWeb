@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>DaWiz Standings</title>
+		<script src="//www.google.com/jsapi"></script>
+		<script>window.parent.maeExportApis_();</script>
+		<link href="https://fonts.googleapis.com/css?family=Calibri" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Dekko" rel="stylesheet">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base target="_top">
+
+<style>
+html {
+  font-size: 18px;
+}
+body {
+    background-color: white;
+    color: black;
+    font-weight: normal;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+.project {
+  max-width: 1280px;
+  width: 70vw;
+  min-width: 80%;
+  margin: 0 auto;  
+}
+.title{
+  display: flex; 
+  width: 100%;
+  justify-content: space-around; 
+  text-align: center;
+  font-family: 'Bowlby One';
+  margin: 10px;
+  font-size: 2rem;
+  color: #2b6be4;
+}
+.mDisp {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  width:90%;
+  border-bottom: 20px;
+}
+.card{
+  background-image: url("https://images.pexels.com/photos/8823335/pexels-photo-8823335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important; 
+  grid-row-gap: 2px;
+  grid-column-gap: 1px;
+  grid-auto-rows: 3.6vh;
+  width: 100%;  
+  box-shadow: 6px 10px 10px 3px rgba(0,0,0,0.6);
+  transition: 0.3s;
+  margin: 0px 20px 5px 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border-bottom: 20px;
+  max-width: 100%;
+  overflow: hidden;
+}
+ .card10{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); 
+}
+.contHdr10{
+  display: flex;
+  grid-column: 1 / span 10;
+  margin:0px 0px 10px 0px;
+  grid-row: 1 / span 1;
+  font-family: "Calibri";
+  font-size: 1em;  
+  justify-content: left;
+  align-items: center
+  }
+.itemH {
+  box-sizing: border-box;
+  background-color: rgba(36, 97, 117, 0.5);
+  color: rgba(255, 255, 102, 1);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 1) ;
+  font-family: "Calibri";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position:sticky;
+  top: 0px;
+  z-index: 2;
+  opacity: 1;
+}
+.item {
+  box-sizing: border-box;
+  background-color: #0093b0;
+  color: white;
+  font-family: "Calibri";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+}
+.pos1-1{grid-column: 1 / span 1; grid-row: 2 / span 2;}
+.col6{grid-column: 2 / span 6;}
+.col2{grid-column: 8 / span 2;}
+.pos10-1{grid-column: 10 / span 1; grid-row: 2 / span 2;}
+.dat0{grid-column: 1 / span 1;}
+.dat1{grid-column: 2 / span 1;}
+.dat2{grid-column: 3 / span 1;}
+.dat3{grid-column: 4 / span 1;}
+.dat4{grid-column: 5 / span 2;}
+.dat5{grid-column: 7 / span 1;}
+.dat6{grid-column: 8 / span 1;}
+.dat7{grid-column: 9 / span 1;}
+.dat8{grid-column:10 / span 1;}
+.dat9{grid-column:11 / span 1;}
+.tStart{border-left: thin solid lightgray; 
+.tNorm{background-color:#fff;color:black;font-weight: 400;}
+.tLo{
+	background-color: #fff3f3;; 
+	color:black;
+	font-weight: 400;
+	text-shadow: 3px 3px 6px rgba(235, 52, 79, 1);
+}
+.tAA{
+	background-color:#F2FDEC; 
+	color:black;
+	font-weight: 400;
+}
+.tHi{
+	background-color:#F2FDEC; 
+	color:#2b6be4;
+	color:black;
+	font-weight: 400;
+	text-shadow: 3px 3px 6px rgba(79, 235, 52, 1);
+}
+.tBA{
+	background-color:#fff3f3;;
+	color:black;
+	font-weight: 400;
+}
+.dfgroup{grid-column: 2 / span 8; border: ridge;}
+.df1{grid-column: 2 / span 2;}
+.df2{grid-column: 4 / span 2;}
+.df3{grid-column: 6 / span 2;}
+.df4{grid-column: 8 / span 2;}
+.crdFtr{
+  margin:0px 0px 10px 0px;
+  font-size: 0.6em !important;
+  font-family: "Calibri" !important;
+  border: ridge;
+  }
+</style>
+
+
+</head>
+<body>
+	<div class="project">
+		<div class="projectTitle">
+			<div id="title" class="title">DaWiz XLVIII (2024 / 2025)</div>
+
+		<div>
+		<div id="loading" class="">
+		<div class="mDisp" id="mainDisplay">
+				<div class=" card card10">
+					<div class="contHdr10">Standings Summary as of Fri Oct 18</div>
+					<div class="itemH pos1-1">Owner </div>
+					<div class="itemH col6">Current </div>
+					<div class="itemH col2">Overnight </div>
+					<div class="itemH pos10-1">Playing Tonight </div>
+					<div class="itemH dat1">GP</div>
+					<div class="itemH dat2">G</div>
+					<div class="itemH dat3">A</div>
+					<div class="itemH dat4">TP</div>
+					<div class="itemH dat5">PPG</div>
+					<div class="itemH dat6">GP </div>
+					<div class="itemH dat7">TP </div>
+					<div class="blnk"></div>
+					<div class="item tNorm tStart dat0">Gerry</div>
+					<div class="item tHi dat1">77</div>
+					<div class="item tAA dat2">22</div>
+					<div class="item tHi dat3">39</div>
+					<div class="item tHi col3 dat4">61</div>
+					<div class="item tHi dat5">0.792</div>
+					<div class="item tAA dat6">11</div>
+					<div class="item tAA dat7">6</div>
+					<div class="item tNorm dat8">2</div>
+					<div class="item tNorm tStart dat0">Luc</div>
+					<div class="item tAA dat1">72</div>
+					<div class="item tHi dat2">27</div>
+					<div class="item tBA dat3">26</div>
+					<div class="item tAA col3 dat4">53</div>
+					<div class="item tAA dat5">0.736</div>
+					<div class="item tAA dat6">11</div>
+					<div class="item tAA dat7">8</div>
+					<div class="item tNorm dat8">2</div>
+					<div class="item tNorm tStart dat0">Frank</div>
+					<div class="item tAA dat1">68</div>
+					<div class="item tBA dat2">17</div>
+					<div class="item tAA dat3">36</div>
+					<div class="item tAA col3 dat4">53</div>
+					<div class="item tAA dat5">0.779</div>
+					<div class="item tBA dat6">9</div>
+					<div class="item tAA dat7">6</div>
+					<div class="item tNorm dat8">4</div>
+					<div class="item tNorm tStart dat0">Matt</div>
+					<div class="item tAA dat1">72</div>
+					<div class="item tBA dat2">17</div>
+					<div class="item tAA dat3">33</div>
+					<div class="item tAA col3 dat4">50</div>
+					<div class="item tBA dat5">0.694</div>
+					<div class="item tHi dat6">13</div>
+					<div class="item tAA dat7">8</div>
+					<div class="item tNorm dat8">1</div>
+					<div class="item tNorm tStart dat0">Phil</div>
+					<div class="item tAA dat1">68</div>
+					<div class="item tBA dat2">18</div>
+					<div class="item tAA dat3">31</div>
+					<div class="item tAA col3 dat4">49</div>
+					<div class="item tBA dat5">0.721</div>
+					<div class="item tHi dat6">13</div>
+					<div class="item tHi dat7">13</div>
+					<div class="item tNorm dat8">2</div>
+					<div class="item tNorm tStart dat0">Dave</div>
+					<div class="item tBA dat1">65</div>
+					<div class="item tAA dat2">23</div>
+					<div class="item tBA dat3">25</div>
+					<div class="item tAA col3 dat4">48</div>
+					<div class="item tAA dat5">0.738</div>
+					<div class="item tBA dat6">9</div>
+					<div class="item tAA dat7">7</div>
+					<div class="item tNorm dat8">3</div>
+					<div class="item tNorm tStart dat0">Leon</div>
+					<div class="item tAA dat1">67</div>
+					<div class="item tBA dat2">16</div>
+					<div class="item tAA dat3">32</div>
+					<div class="item tAA col3 dat4">48</div>
+					<div class="item tBA dat5">0.716</div>
+					<div class="item tBA dat6">9</div>
+					<div class="item tBA dat7">5</div>
+					<div class="item tNorm dat8">5</div>
+					<div class="item tNorm tStart dat0">Luke</div>
+					<div class="item tBA dat1">62</div>
+					<div class="item tAA dat2">22</div>
+					<div class="item tBA dat3">26</div>
+					<div class="item tAA col3 dat4">48</div>
+					<div class="item tAA dat5">0.774</div>
+					<div class="item tAA dat6">12</div>
+					<div class="item tAA dat7">7</div>
+					<div class="item tNorm dat8">1</div>
+					<div class="item tNorm tStart dat0">Bill</div>
+					<div class="item tBA dat1">62</div>
+					<div class="item tLo dat2">14</div>
+					<div class="item tAA dat3">33</div>
+					<div class="item tBA col3 dat4">47</div>
+					<div class="item tAA dat5">0.758</div>
+					<div class="item tAA dat6">12</div>
+					<div class="item tAA dat7">7</div>
+					<div class="item tNorm dat8">1</div>
+					<div class="item tNorm tStart dat0">Joe</div>
+					<div class="item tAA dat1">69</div>
+					<div class="item tLo dat2">14</div>
+					<div class="item tAA dat3">30</div>
+					<div class="item tBA col3 dat4">44</div>
+					<div class="item tLo dat5">0.638</div>
+					<div class="item tLo dat6">7</div>
+					<div class="item tLo dat7">2</div>
+					<div class="item tNorm dat8">7</div>
+					<div class="item tNorm tStart dat0">Darrin</div>
+					<div class="item tBA dat1">64</div>
+					<div class="item tBA dat2">16</div>
+					<div class="item tBA dat3">27</div>
+					<div class="item tBA col3 dat4">43</div>
+					<div class="item tBA dat5">0.672</div>
+					<div class="item tLo dat6">7</div>
+					<div class="item tLo dat7">2</div>
+					<div class="item tNorm dat8">5</div>
+					<div class="item tNorm tStart dat0">Chad</div>
+					<div class="item tLo dat1">49</div>
+					<div class="item tBA dat2">16</div>
+					<div class="item tLo dat3">18</div>
+					<div class="item tLo col3 dat4">34</div>
+					<div class="item tBA dat5">0.694</div>
+					<div class="item tBA dat6">8</div>
+					<div class="item tBA dat7">5</div>
+					<div class="item tNorm dat8">3</div>
+					<div class="blnk"></div>
+					<div class="item df1 tHi crdFtr"> Best</div>
+					<div class="item df2 tAA crdFtr"> Above Average</div>
+					<div class="item df3 tBA crdFtr"> Below Average</div>
+					<div class="item df4 tLo crdFtr"> Worst</div>
+				</div>
+		</div>
+		</div>
+		</div>
+
+	</div>
+	</div>
+
+</body>
+</html>
