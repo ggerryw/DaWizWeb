@@ -1,0 +1,119 @@
+
+.project{
+    display: flex;
+    justify-content: center;  /* Horizontal centering */
+    
+    width: 70vw;
+    min-width: 80%;
+    margin: 0 auto; /* center the element horizontally */
+}
+.title{
+    display: flex;
+    justify-content: center;  /* Horizontal centering */
+    font-family: "Calibri";
+    font-size: clamp(1rem, 4vw, 5rem);
+    color: #2b6be4;/*ford grabber blue*/
+    align-items: center
+}
+.mDisp{
+  display: flex; 
+  place-items: center;
+  height:80vh;            /* Make the container take full viewport height */
+}
+
+/* Card styling */
+.card {
+    display: grid;
+    background-image: url("https://images.pexels.com/photos/8823335/pexels-photo-8823335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important; 
+    grid-row-gap: 2px;
+    grid-column-gap: 1px;
+    grid-auto-rows: 3.6vh;
+    width: 100%;
+    /* Add shadows to create the "card" effect */
+    box-shadow: 6px 10px 10px 3px rgba(0,0,0,0.6);
+    transition: 0.3s;
+    margin: 0px 20px 5px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    }
+.card10{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+ /* font-size: clamp(12px, 2vw, 24px);*/
+}
+.contHdr10{
+  display: flex;
+  grid-column: 1 / span 10;
+  margin:0px 0px 10px 0px;
+  grid-row: 1 / span 1;
+  font-family: "Calibri";
+  font-size: clamp(1rem, 2vw, 4rem);
+  color: #2b6be4;/*ford grabber blue*/
+  justify-content: left;
+  align-items: center
+}
+.item{
+  box-sizing: border-box;
+  background-color: #0093b0;
+  color: white;
+  font-family: "Calibri";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(.9rem, 2vw, 1.75rem);
+  /*line-height: 2.5vw;*/
+  border-radius: 5px;
+}
+.itemH{
+  box-sizing: border-box;
+  background-color: rgba(36, 97, 117, 0.5);
+  color: yellow !important;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 1) ;
+  font-family: "Calibri";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(.6rem, 1.5vw, 2rem);
+  position:sticky;
+  top: 0px;
+  z-index: 2;
+  opacity: 1;
+}
+.pos1-1{grid-column: 1 / span 1; grid-row: 2 / span 2;}
+.pos10-1{grid-column: 10 / span 1; grid-row: 2 / span 2;}
+.col6{grid-column: 2 / span 6;}
+.col2{grid-column: 8 / span 2;}
+.col3{grid-column: 5 / span 2;}
+.dat0{grid-column: 1 / span 1;}
+.dat1{grid-column: 2 / span 1;}
+.dat2{grid-column: 3 / span 1;}
+.dat3{grid-column: 4 / span 1;}
+.dat4{grid-column: 5 / span 2;}
+.dat5{grid-column: 7 / span 1;}
+.dat6{grid-column: 8 / span 1;}
+.dat7{grid-column: 9 / span 1;}
+.blnk{grid-column: 1 / span 9; background-color: white; height: 10px;}
+.tBA{background-color:#fff3f3;color:black;font-weight: 400;}
+.tLo{background-color: #fff3f3;color:black;font-weight: 400;text-shadow: 3px 3px 6px rgba(235, 52, 79, 1);}
+.tAA{background-color:#F2FDEC;color:black;font-weight: 400;}
+.tHi{background-color:#F2FDEC;color:#2b6be4;color:black;font-weight: 400;text-shadow: 3px 3px 6px rgba(79, 235, 52, 1);}
+.tStart{border-left: thin solid lightgray;}
+.tNorm{background-color:#fff;color:black;font-weight: 400;}
+.df1{grid-column: 2 / span 2;}
+.df2{grid-column: 4 / span 2;}
+.df3{grid-column: 6 / span 2;}
+.df4{grid-column: 8 / span 2;}
+.crdFtr{
+    margin:0px 0px 10px 0px;
+    font-size: 0.6rem !important;
+    font-family: "Calibri" !important;
+    font-size: clamp(.45rem, 1.5vw, 2rem);
+    border: ridge;
+}

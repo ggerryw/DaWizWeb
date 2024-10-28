@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--Import Google Icon Font-->
+    <link href='https://fonts.googleapis.com/css?family=Calibri' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+	<link rel="stylesheet" href="CSS/standingsStyle.css"> 
+		<title>DaWiz Standings</title>
+
+</head>
+	
+<body>
+	<div id="title" class="title">DaWiz XLVIII (2024/2025)</div>
+    <div id="container"></div>
+    <script>
+        // Fetch and insert the standings content
+        fetch("Content/Standings/standings.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("container").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading standings:", error));
+    </script>
+    
+</body>
+</html>
+
