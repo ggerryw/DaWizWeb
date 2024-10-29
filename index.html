@@ -25,7 +25,7 @@
             .catch(error => console.error("Error loading menu:", error));
         // Load the pages mapping from pages.json
         let pages = {};
-        fetch("Content/Json/pages.json")
+        fetch("Json/pages.json")
             .then(response => response.json())
             .then(data => {
                 pages = data;
