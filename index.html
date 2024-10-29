@@ -15,9 +15,9 @@
     <div id="container"></div>
     <script>
         // Load the menu structure from menu.html
-        fetch("menu.html")
+        fetch("Menu.html")
             .then(response => response.text())
-            .then(MenuHTML => {
+            .then(menuHTML => {
                 document.getElementById("menu-container").innerHTML = menuHTML;
                 setupMenuEventListeners();
             })
