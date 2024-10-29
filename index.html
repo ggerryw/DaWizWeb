@@ -14,8 +14,9 @@
     <div id="menu-container"></div>
     <div id="container"></div>
     <script>
+
         // Load the menu structure from menu.html
-        fetch("menu.html")
+        fetch("Content/Menu/menu.html")
             .then(response => response.text())
             .then(menuHTML => {
                 document.getElementById("menu-container").innerHTML = menuHTML;
@@ -24,12 +25,13 @@
             .catch(error => console.error("Error loading menu:", error));
         // Load the pages mapping from pages.json
         let pages = {};
-        fetch("pages.json")
+        fetch("Content/Json/pages.json")
             .then(response => response.json())
             .then(data => {
                 pages = data;
             })
             .catch(error => console.error("Error loading pages mapping:", error));
+
         // Fetch and insert the standings content
         fetch("Content/Standings/standings.html")
             .then(response => response.text())
