@@ -22,6 +22,7 @@
   justify-content: center;
   width: clamp(250px,100vw, 95%);
   height: clamp(300px, 100vh, 80vh);
+  font-size: clamp(1.5rem, 2vw, 4rem);
 }
 /* Tablet and desktop */
 @media (min-width: 768px) {
