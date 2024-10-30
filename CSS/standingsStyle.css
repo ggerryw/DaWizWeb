@@ -10,9 +10,9 @@
 .title{
     display: flex;
     justify-content: center;  /* Horizontal centering */
-    font-family: "Calibri";
+    font-family: "Dekko";
     font-size: clamp(1rem, 4vw, 5rem);
-    color: #2b6be4;/*ford grabber blue*/
+    color: #880312;/*ford grabber blue*/
     align-items: center
 }
 
@@ -20,8 +20,8 @@
 .mDisp{
   display: flex; 
   justify-content: center;
-  width: clamp(250px, 90vw, 95%);
-  height: clamp(300px, 90vh, 80vh);
+  width: clamp(250px,100vw, 95%);
+  height: clamp(300px, 100vh, 80vh);
 }
 /* Tablet and desktop */
 @media (min-width: 768px) {
