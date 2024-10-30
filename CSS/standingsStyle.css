@@ -15,10 +15,22 @@
     color: #2b6be4;/*ford grabber blue*/
     align-items: center
 }
+
+
 .mDisp{
   display: flex; 
-  place-items: center;
-  height:80vh;            /* Make the container take full viewport height */
+  justify-content: center;
+  width: clamp(250px, 90vw, 95%);
+  height: clamp(300px, 90vh, 80vh);
+}
+/* Tablet and desktop */
+@media (min-width: 768px) {
+  .mDisp{
+    display: flex; 
+    justify-content: center;
+    width: clamp(400px, 90vw, 90%);
+    height: clamp(400px, 100vh, 100%);
+  }
 }
 
 /* Card styling */
@@ -41,6 +53,9 @@
     max-width: 100%;
     overflow: hidden;
     }
+
+
+
 .card10{
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -57,6 +72,25 @@
   justify-content: left;
   align-items: center
 }
+.card12{
+  display: grid;
+  grid-template-columns: 2fr repeat(10, 1fr);
+  overflow: auto;
+  background: white;
+  color: black;
+  font-size: clamp(1rem, 2vw, 4rem);
+}
+.contHdr12{
+  display: flex;
+  grid-column: 1 / span 12;
+  grid-row: 1 / span 1;
+  font-family: "Calibri";
+  font-size: clamp(.8rem, 2vw, 3rem);
+  margin: 3px;  
+  justify-content: left;
+  align-items: center;
+
+}
 .item{
   box-sizing: border-box;
   background-color: #0093b0;
@@ -66,7 +100,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: clamp(.9rem, 2vw, 1.75rem);
+  font-size: clamp(.9rem, 1.5vw, 2rem);
   /*line-height: 2.5vw;*/
   border-radius: 5px;
 }
@@ -80,12 +114,27 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: clamp(.6rem, 1.5vw, 2rem);
+  font-size: clamp(.45rem, .8vw, 1rem);
   position:sticky;
   top: 0px;
   z-index: 2;
   opacity: 1;
 }
+.bonw {
+  background: white;
+  color: black;
+  font-size: clamp(.65rem, 1.5vw, 2rem);
+}
+.bbOn{
+  border-bottom: 4px ridge lightgrey;
+}
+.bbOff{
+  border-bottom: 0px;
+.rowC1{background: powderblue ; color:black;}
+.rowC0{background: #e5ebff;}
+}
+.dat01{grid-column: 1 / span 2;}
+
 .pos1-1{grid-column: 1 / span 1; grid-row: 2 / span 2;}
 .pos10-1{grid-column: 10 / span 1; grid-row: 2 / span 2;}
 .col6{grid-column: 2 / span 6;}
@@ -112,8 +161,7 @@
 .df4{grid-column: 8 / span 2;}
 .crdFtr{
     margin:0px 0px 10px 0px;
-    font-size: 0.6rem !important;
     font-family: "Calibri" !important;
-    font-size: clamp(.45rem, 1.5vw, 2rem);
+    font-size: clamp(.45rem, 1vw, 2rem);
     border: ridge;
 }
