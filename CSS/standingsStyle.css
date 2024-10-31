@@ -1,86 +1,60 @@
 
-.project{
-    display: flex;
-    justify-content: center;  /* Horizontal centering */
-    
-    width: 70vw;
-    min-width: 80%;
-    margin: 0 auto; /* center the element horizontally */
-}
-.title{
-    display: flex;
-    justify-content: center;  /* Horizontal centering */
-    font-family: "Dekko";
-    font-size: clamp(1rem, 4vw, 5rem);
-    color: #ee021d;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Black shadow with some transparency */
-    align-items: center
-}
 
 
 .mDisp{
-  display: flex; 
-  justify-content: center;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center;
+  justify-content: center;  /* Horizontal centering */
   width: clamp(250px,100vw, 95%);
   height: clamp(300px, 100vh, 80vh);
-  font-size: clamp(1.5rem, 2vw, 4rem);
+  font-size: clamp(1.5rem, 4vw, 4rem);
 }
 /* Tablet and desktop */
 @media (min-width: 768px) {
   .mDisp{
-    display: flex; 
-    justify-content: center;
-
+    width: clamp(400px, 90vw, 75%);
+    height: clamp(300px, 90vh, 80%);
   }
 }
 
 /* Card styling */
 .card {
-
-    width: clamp(400px, 90vw, 75%);
-    height: clamp(300px, 90vh, 80%);
-    align-items: center;
-    justify-content: center;
     padding: 10px; /* Add padding */
     box-sizing: border-box; /* Prevent overflow due to padding */
     display: flex; /* Change to flex to allow center alignment */
     flex-direction: column; /* To stack elements if needed */
+    align-items: center; /* Center card contents horizontally */
+    width: 100%; /* Make card full width of mDisp */
     }
 
 .card10{
-  background-image: none;
-  background-color: #f4fafb;
-  opacity: .85;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-row-gap: 2px;
-  grid-column-gap: 1px;
-  grid-auto-rows: 3.6vh;
-  box-shadow: 6px 10px 10px 3px rgba(0,0,0,0.6);
-  transition: 0.3s;
-  margin: 0;
-  padding: 0;
-  border-radius: 10px;
-  border-bottom: 20px;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-row-gap: 1.5px;
+    grid-column-gap: 3px;
+    grid-auto-rows: 3vh;
+    box-shadow: 6px 10px 10px 3px rgba(0,0,0,0.6);
+    transition: 0.3s;
+    border-radius: 10px;
+    padding: 3px;
+
 }
+    
 .card10--crumpled {
   background-image: url("https://images.pexels.com/photos/8823335/pexels-photo-8823335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
   background-size: cover !important;
   background-repeat: no-repeat !important; 
+
 }
-.contHdr10{
-  display: flex;
+.card10--header{
   grid-column: 1 / span 10;
-  margin:10px 10px 10px 40px;
-  grid-row: 1 / span 1;
+  margin:3px 3px 3px 30px;
   font-family: "Calibri";
   font-size: clamp(1rem, 2vw, 4rem);
   color: #0e4fc7;/*ford grabber blue*/
-  justify-content: left;
-  align-items: center
+  justify-content: center;
+  align-items: left
 }
 .card12{
   display: grid;
@@ -110,7 +84,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: clamp(.9rem, 1.5vw, 2rem);
+  font-size: clamp(.9rem, 1.4vw, 2rem);
   /*line-height: 2.5vw;*/
   border-radius: 5px;
 }
@@ -130,6 +104,7 @@
   z-index: 2;
   opacity: 1;
 }
+
 .bonw {
   background: white;
   color: black;
@@ -145,33 +120,27 @@
 }
 .dat01{grid-column: 1 / span 2;}
 
-.pos1-1{grid-column: 1 / span 1; grid-row: 2 / span 2;}
-.pos10-1{grid-column: 10 / span 1; grid-row: 2 / span 2;}
-.col6{grid-column: 2 / span 6;}
-.col2{grid-column: 8 / span 2;}
-.col3{grid-column: 5 / span 2;}
-.dat0{grid-column: 1 / span 1;}
-.dat1{grid-column: 2 / span 1;}
-.dat2{grid-column: 3 / span 1;}
-.dat3{grid-column: 4 / span 1;}
-.dat4{grid-column: 5 / span 2;}
-.dat5{grid-column: 7 / span 1;}
-.dat6{grid-column: 8 / span 1;}
-.dat7{grid-column: 9 / span 1;}
+.span-2R {grid-row: span 2;}
+.span-2C {grid-column: span 2;} 
+.span-6C {grid-column: span 6;}
+
+.dat4 {grid-column: span 2;} 
+
 .blnk{grid-column: 1 / span 9; background-color: white; height: 10px;}
+
 .tBA{background-color:#fff3f3;color:black;font-weight: 400;}
 .tLo{background-color: #fff3f3;color:black;font-weight: 400;text-shadow: 3px 3px 6px rgba(235, 52, 79, 1);}
 .tAA{background-color:#F2FDEC;color:black;font-weight: 400;}
 .tHi{background-color:#F2FDEC;color:#2b6be4;color:black;font-weight: 400;text-shadow: 3px 3px 6px rgba(79, 235, 52, 1);}
 .tStart{border-left: thin solid lightgray;}
 .tNorm{background-color:#fff;color:black;font-weight: 400;}
-.df1{grid-column: 2 / span 2;}
-.df2{grid-column: 4 / span 2;}
-.df3{grid-column: 6 / span 2;}
-.df4{grid-column: 8 / span 2;}
+
+
 .crdFtr{
-    margin:0px 0px 10px 0px;
+    box-sizing: border-box;
+    margin:10px 0px 10px 10px;
     font-family: "Calibri" !important;
     font-size: clamp(.45rem, 1vw, 2rem);
-    border: ridge;
+    border:1 ;
+    text-align: center;
 }

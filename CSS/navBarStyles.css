@@ -1,0 +1,98 @@
+/* Container styles */
+
+
+  #nav {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;
+    justify-content: center;  /* Horizontal centering */
+
+
+    }
+  
+    nav {
+      font-family: "Calibri", sans-serif;
+      font-weight: bold;
+      font-size: .6rem;
+      text-align: center;
+      box-sizing: border-box;
+      background-color: #0a0a0a; /* Light gray background for nav */
+      width: 100%;
+    }
+  
+  /* Main Menu Styling */
+  #menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5px; /* Spacing between menu items */
+    width: 90%;
+  }
+  
+  #menu > li {
+    position: relative;
+  }
+
+  #menu > li a{
+    background-color: #000;
+    color: white;
+  }
+  
+  #menu a {
+    display: inline-block;
+    color: #3B3B3B;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  #menu a:hover {
+    background-color: #5798B4;
+    color: yellow;
+    cursor: pointer;
+  }
+  
+  /* Submenu Styling */
+  .hidden-menu {
+    display: none; /* Hide submenu by default */
+    position: absolute;
+    top: 100%; /* Position below the parent */
+    left: 0;
+    background-color: #2121A3;
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 5;
+  }
+  
+  #menu li:hover .hidden-menu {
+    display: block; /* Show on hover */
+  }
+  
+  /* Submenu item styling */
+  .hidden-menu li {
+    width: 12em; /* Define width for submenu */
+    text-align: left;
+  }
+  
+  .hidden-menu a {
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .hidden-menu a:hover {
+    background-color: #5798B4;
+    color: yellow;
+  }
+  
+  /* Disabled link styles */
+  .disabled {
+    pointer-events: none;
+    opacity: 0.8;
+    background-color: #808080 !important;
+  }
+  
