@@ -125,13 +125,14 @@
   font-size: clamp(.65rem, 1.5vw, 2rem);
 }
 .bbOn{
-  border-bottom: 4px  rgb(5, 5, 5);
+  border-bottom: 1px dotted rgb(71, 71, 71);
 }
 .bbOff{
   border-bottom: 0px;
+}
 .rowC1{background: powderblue ; color:black;}
 .rowC0{background: #e5ebff;}
-}
+
 .dat01{grid-column: 1 / span 2;}
 
 .span-2R {grid-row: span 2;}
