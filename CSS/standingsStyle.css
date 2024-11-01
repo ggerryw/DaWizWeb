@@ -7,14 +7,14 @@
   align-items: center;
   justify-content: center;  /* Horizontal centering */
   width: clamp(760px,100vw, 98%);
-  height: clamp(450px, 100vh, 80vh);
+
   font-size: clamp(1.5rem, 4vw, 4rem);
 }
 /* Tablet and desktop */
 @media (min-width: 768px) {
   .mDisp{
     width: clamp(400px, 100vw, 95%);
-    height: clamp(300px, 90vh, 80%);
+
   }
 }
 
@@ -68,6 +68,7 @@
     padding: 3px;
     width: 60%;
     font-size: clamp(.8rem, 1vw, 1rem);
+    overflow-y: scroll;
 }
 .card11--header{
   display: flex;
