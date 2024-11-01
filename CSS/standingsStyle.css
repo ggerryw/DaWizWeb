@@ -39,11 +39,9 @@
     border-radius: 10px;
     padding: 3px;
     width: 60%;
-  
-
-}
+  }
     
-.card10--crumpled {
+.card--crumpled {
   background-image: url("https://images.pexels.com/photos/8823335/pexels-photo-8823335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
   background-size: cover !important;
   background-repeat: no-repeat !important; 
@@ -60,7 +58,9 @@
 .card12{
   display: grid;
   grid-template-columns: 2fr repeat(10, 1fr);
-  overflow: auto;
+  grid-row-gap: 1.5px;
+  grid-column-gap: 3px;
+  overflow: hidden;
   background: white;
   color: black;
   font-size: clamp(1rem, 2vw, 4rem);
@@ -123,6 +123,9 @@
 .span-6C {grid-column: span 6;}
 .span-10C {grid-column: span 10;}
 
+.rowC1{background: powderblue ; color:black;}
+.rowC0{background: #e5ebff;}
+
 .dat4 {grid-column: span 2;} 
 
 .blnk{grid-column: 1 / span 9; background-color: white; height: 10px;}
@@ -133,17 +136,6 @@
 .tHi{background-color:#F2FDEC;color:#2b6be4;color:black;font-weight: 400;text-shadow: 3px 3px 6px rgba(79, 235, 52, 1);}
 .tStart{border-left: thin solid lightgray;}
 .tNorm{background-color:#fff;color:black;font-weight: 400;}
-
-
-.crdFtrold{
-    box-sizing: border-box;
-    margin:10px 0px 10px 10px;
-    font-family: "Calibri" !important;
-    font-size: clamp(.45rem, 1vw, 2rem);
-    border:1 ;
-    text-align: center;
-    
-}
 
 .crdFtr {
   font-family: "Calibri";
