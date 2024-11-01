@@ -1,5 +1,10 @@
 
-#container{
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    
+    #container{
     display: flex;
     flex-direction: column; /* Stack children vertically */
     align-items: center;
