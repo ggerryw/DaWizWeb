@@ -1,6 +1,6 @@
 
     body{
- 
+    overflow: hidden;
     }
     
     #container{
@@ -8,6 +8,7 @@
     flex-direction: column; /* Stack children vertically */
     align-items: center;
     justify-content: center;  /* Horizontal centering */
+    overflow: hidden;
    
 }
 #title{
