@@ -1,18 +1,19 @@
 
 
 
-.mDisp{
+.mainDisplay{
   display: flex;
   flex-direction: column; /* Stack children vertically */
   align-items: center;
   justify-content: center;  /* Horizontal centering */
   width: clamp(760px,100vw, 98%);
-
+  height: 100vh;
   font-size: clamp(1.5rem, 4vw, 4rem);
+  overflow: hidden;
 }
 /* Tablet and desktop */
 @media (min-width: 768px) {
-  .mDisp{
+  .mainDisplay{
     width: clamp(400px, 100vw, 95%);
 
   }
@@ -20,14 +21,15 @@
 
 /* Card styling */
 .card {
-    padding: 10px; /* Add padding */
-    box-sizing: border-box; /* Prevent overflow due to padding */
-    display: flex; /* Change to flex to allow center alignment */
-    flex-direction: column; /* To stack elements if needed */
-    align-items: center; /* Center card contents horizontally */
-    width: 95vw; /* Full viewport width */
-    overflow: hidden;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Full height of .mDisp */
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevents outer scroll */
+}
 
 .card10{
     display: grid;
@@ -39,7 +41,11 @@
     transition: 0.3s;
     border-radius: 10px;
     padding: 3px;
-    width: 60%;
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding 10px;
   }
     
 .card--crumpled {
@@ -66,9 +72,12 @@
     transition: 0.3s;
     border-radius: 10px;
     padding: 3px;
-    width: 60%;
     font-size: clamp(.8rem, 1vw, 1rem);
-    overflow-y: scroll;
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 10px;
 }
 .card11--header{
   display: flex;
