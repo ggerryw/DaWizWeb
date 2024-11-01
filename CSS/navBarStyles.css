@@ -13,11 +13,13 @@
     nav {
       font-family: "Calibri", sans-serif;
       font-weight: bold;
-      font-size: .6rem;
+      font-size: .8rem;
       text-align: center;
       box-sizing: border-box;
-      background-color: #0a0a0a; /* Light gray background for nav */
+      background-color: #540d0d; /* Light gray background for nav */
       width: 100%;
+      padding: 10px 0; 
+      border-radius: 10px;
     }
   
   /* Main Menu Styling */
@@ -26,16 +28,24 @@
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px; /* Spacing between menu items */
-    width: 100%;
+    gap: 0px; /* Spacing between menu items */
+    justify-content: center;
   }
   
   #menu > li {
     position: relative;
+    min-width: 8em;
+    background-color: #540d0d; /* Default background color */
+  }
+
+  /* Change background color on hover for both main and submenu */
+  #menu > li:hover, /* Main menu item hover */
+    .hidden-menu li:hover { /* Submenu item hover */
+      background-color: #722222; /* Change to the hover color you want */
   }
 
   #menu > li a{
-    background-color: #000;
+    background-color: #540d0d;;
     color: white;
   }
   
@@ -58,13 +68,15 @@
   /* Submenu Styling */
   .hidden-menu {
     display: none; /* Hide submenu by default */
+    list-style: none;
     position: absolute;
     top: 100%; /* Position below the parent */
     left: 0;
-    background-color: #2121A3;
+    background-color: #540d0d;;
     border-radius: 5px;
     padding: 10px 0;
     z-index: 5;
+    min-width: 100%;
   }
   
   #menu li:hover .hidden-menu {
@@ -73,8 +85,10 @@
   
   /* Submenu item styling */
   .hidden-menu li {
-    width: 12em; /* Define width for submenu */
+    width: 100%; /* Define width for submenu */
     text-align: left;
+    padding: 5px 10px; /* Optional padding for readability */
+    white-space: nowrap; /* Prevent text wrapping */
   }
   
   .hidden-menu a {
