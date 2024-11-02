@@ -5,16 +5,15 @@
     align-items: center;
     justify-content: space-between;
     background-color: #540d0d;
-    padding: 10px 20px;
+    padding: 5px 10px;
     color: white;
     font-family: "Calibri", sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
+    font-size: .8rem;
   }
 
   /* Title Styling */
   .title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   /* Menu Toggle Button (Hamburger) */
   #menu-toggle {
@@ -33,13 +32,12 @@
   
     nav {
       font-family: "Calibri", sans-serif;
-      font-weight: bold;
       font-size: .8rem;
       text-align: center;
       box-sizing: border-box;
       background-color: #540d0d; /* Light gray background for nav */
       width: 100%;
-      padding: 10px 0; 
+      padding: 5px 0; 
       border-radius: 10px;
     }
   
@@ -55,29 +53,30 @@
   
   #menu > li {
     position: relative;
-    min-width: 8em;
+    min-width: 5em;
     background-color: #540d0d; /* Default background color */
   }
 
   /* Change background color on hover for both main and submenu */
   #menu > li:hover, /* Main menu item hover */
     .hidden-menu li:hover { /* Submenu item hover */
-      background-color: #722222; /* Change to the hover color you want */
+      background-color: #624d4d; /* Change to the hover color you want */
   }
 
   #menu > li a{
-    background-color: #540d0d;;
+    display: block;
+    width 100%;
+    background-color: #540d0d;
     color: white;
     text-decoration: none;
-    padding: 5px 10px;
-    display: block;
+    padding: 1px 2px;
   }
   
   #menu a {
     display: inline-block;
     color: #3B3B3B;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 3px 5px;
     background-color: #f4f4f4;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -96,11 +95,11 @@
     position: absolute;
     top: 100%; /* Position below the parent */
     left: 0;
-    background-color: #540d0d;;
+    background-color: #624d4d;
     border-radius: 5px;
-    padding: 10px 0;
+    padding: 6px 0;
     z-index: 5;
-    min-width: 100%;
+    min-width: 80%;
   }
   
   #menu li:hover .hidden-menu {
@@ -109,26 +108,27 @@
   
   #menu > li:hover,
     .hidden-menu li:hover {
-        background-color: #722222;
+        background-color: #624d4d;
   }
 
   /* Submenu item styling */
   .hidden-menu li {
-    width: 100%; /* Define width for submenu */
+    width: 80%; /* Define width for submenu */
     text-align: left;
-    padding: 5px 10px; /* Optional padding for readability */
+    padding: 5px 5px; /* Optional padding for readability */
     white-space: nowrap; /* Prevent text wrapping */
   }
   
   .hidden-menu a {
+    background-color:#624d4d !important;
     color: white;
-    padding: 8px 12px;
+    padding: 3px 5px;
     text-decoration: none;
     display: block;
   }
   
   .hidden-menu a:hover {
-    background-color: #5798B4;
+    background-color: #5798B4 !important;
     color: yellow;
   }
   
