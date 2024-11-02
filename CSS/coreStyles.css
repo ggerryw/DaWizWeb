@@ -11,16 +11,6 @@
     overflow: hidden;
    
 }
-#title{
-    display: flex;
-    justify-content: center;  /* Horizontal centering */
-    font-family: "Dekko";
-    font-size: clamp(1rem, 4vw, 5rem);
-    color: #ee021d;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Black shadow with some transparency */
-    align-items: center
-}
-
 
 #menu-container{
     display: flex;

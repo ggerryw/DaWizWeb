@@ -1,14 +1,35 @@
 /* Container styles */
-
-
-  #nav {
+  /* Banner Container */
+  #banner {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
     align-items: center;
-    justify-content: center;  /* Horizontal centering */
+    justify-content: space-between;
+    background-color: #540d0d;
+    padding: 10px 20px;
+    color: white;
+    font-family: "Calibri", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+  }
 
+  /* Title Styling */
+  .title {
+    font-size: 1.2rem;
+  }
+  /* Menu Toggle Button (Hamburger) */
+  #menu-toggle {
+    display: none;
+  }
+    /* Show menu icon on small screens */
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+  }
 
-    }
   
     nav {
       font-family: "Calibri", sans-serif;
@@ -47,6 +68,9 @@
   #menu > li a{
     background-color: #540d0d;;
     color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
   }
   
   #menu a {
@@ -83,6 +107,11 @@
     display: block; /* Show on hover */
   }
   
+  #menu > li:hover,
+    .hidden-menu li:hover {
+        background-color: #722222;
+  }
+
   /* Submenu item styling */
   .hidden-menu li {
     width: 100%; /* Define width for submenu */
@@ -109,4 +138,40 @@
     opacity: 0.8;
     background-color: #808080 !important;
   }
+  /* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+  #banner {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  /* Show menu icon for mobile */
+  .menu-icon {
+      display: block;
+  }
+
+  /* Hide menu initially */
+  #menu {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+  }
+
+  /* Toggle menu display when checkbox is checked */
+  #menu-toggle:checked + label + nav #menu {
+      display: flex;
+  }
+  #menu > li {
+    width: 100%;
+    text-align: center;
+}
+
+.hidden-menu {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+}
+}
   
