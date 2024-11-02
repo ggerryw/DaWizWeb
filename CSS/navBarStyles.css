@@ -65,7 +65,7 @@
 
   #menu > li a{
     display: block;
-    width 100%;
+    width: 100%;
     background-color: #540d0d;
     color: white;
     text-decoration: none;
