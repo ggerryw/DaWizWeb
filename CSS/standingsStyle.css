@@ -6,7 +6,7 @@
   flex-direction: column; /* Stack children vertically */
   align-items: center;
   justify-content: center;  /* Horizontal centering */
-  width: clamp(760px,100vw, 98%);
+  width: clamp(760px,760px, 98%);
   height: 100vh;
   font-size: clamp(1.5rem, 4vw, 4rem);
   overflow: hidden;
@@ -41,7 +41,7 @@
     transition: 0.3s;
     border-radius: 10px;
     padding: 3px;
-    width: clamp(400px, 60vw, 1000px);
+    width: 95vw;
     max-height: 100%;
     overflow-y: auto;
     box-sizing: border-box;
