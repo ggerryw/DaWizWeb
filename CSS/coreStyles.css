@@ -8,12 +8,22 @@
     flex-direction: column; /* Stack children vertically */
     align-items: center;
     justify-content: center;  /* Horizontal centering */
-    overflow: hidden;
-   
-}
+    overflow: hidden; 
+    }
 
-#menu-container{
-    display: flex;
-    justify-content: center; /* Center #nav horizontally */
-    align-items: center;     /* Center #nav vertically if needed */
-}
+    .mainDisplay{
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        align-items: center;
+        justify-content: center;  /* Horizontal centering */
+        width: clamp(480px, 100vw, 1500px);
+        height: 100vh;
+        font-size: clamp(1.5rem, 4vw, 3rem);
+        overflow: hidden;
+    }
+
+    #menu-container{
+        display: flex;
+        justify-content: center; /* Center #nav horizontally */
+        align-items: center;     /* Center #nav vertically if needed */
+    }
