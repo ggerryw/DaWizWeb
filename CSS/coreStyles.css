@@ -16,7 +16,7 @@
         flex-direction: column; /* Stack children vertically */
         align-items: center;
         justify-content: center;  /* Horizontal centering */
-        width: clamp(480px, 100vw, 1500px);
+        width: 100vw;
         height: 100vh;
         font-size: clamp(1.5rem, 4vw, 3rem);
         overflow: hidden;
