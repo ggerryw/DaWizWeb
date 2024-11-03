@@ -1,25 +1,24 @@
 
     body{
-    overflow: hidden;
+        overflow: hidden;
+        background-color: #1155cc;    
+
     }
     
     #container{
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center;
-    justify-content: center;  /* Horizontal centering */
-    overflow: hidden; 
+        display: flex;
+        justify-content: center;  /* Horizontal centering */
+        overflow: hidden; 
     }
 
-    .mainDisplay{
+    .mainDisplay {
         display: flex;
-        flex-direction: column; /* Stack children vertically */
-        align-items: center;
-        justify-content: center;  /* Horizontal centering */
+        justify-content: center; /* Horizontal centering */
         width: 100vw;
-        height: 100vh;
+        height: calc(100vh - 130px); /* Adjust for the height of the banner */
         font-size: clamp(1.5rem, 4vw, 3rem);
         overflow: hidden;
+ 
     }
 
     #menu-container{

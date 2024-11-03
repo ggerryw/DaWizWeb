@@ -1,177 +1,138 @@
-/* Container styles */
-  /* Banner Container */
-  #banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #540d0d;
-    padding: 5px 10px;
-    color: white;
-    font-family: "Calibri", sans-serif;
-    font-size: .8rem;
-  }
+/* Banner Styling */
+#banner {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-end; /* Align menu to the bottom of the banner */
+  align-items: center; /* Center items horizontally */
+  padding: 5px;
+  color: white; /* Color for the text */
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+} 
 
-  /* Title Styling */
-  .title {
-    font-size: 1.5rem;
-  }
-  /* Menu Toggle Button (Hamburger) */
-  #menu-toggle {
-    display: none;
-  }
-    /* Show menu icon on small screens */
-  .menu-icon {
-    display: none;
-    cursor: pointer;
-    color: white;
-    font-size: 1.5rem;
-    background-color: transparent;
-    border: none;
-  }
-
-  
-    nav {
-      font-family: "Calibri", sans-serif;
-      font-size: .8rem;
-      text-align: center;
-      box-sizing: border-box;
-      background-color: #540d0d; /* Light gray background for nav */
-      width: 100%;
-      padding: 5px 0; 
-      border-radius: 10px;
-    }
-  
-  /* Main Menu Styling */
-  #menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 0px; /* Spacing between menu items */
-    justify-content: center;
-  }
-  
-  #menu > li {
-    position: relative;
-    min-width: 5em;
-    background-color: #540d0d; /* Default background color */
-  }
-
-  /* Change background color on hover for both main and submenu */
-  #menu > li:hover, /* Main menu item hover */
-    .hidden-menu li:hover { /* Submenu item hover */
-      background-color: #624d4d; /* Change to the hover color you want */
-  }
-
-  #menu > li a{
-    display: block;
-    width: 100%;
-    background-color: #540d0d;
-    color: white;
-    text-decoration: none;
-    padding: 1px 2px;
-  }
-  
-  #menu a {
-    display: inline-block;
-    color: #3B3B3B;
-    text-decoration: none;
-    padding: 3px 5px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  #menu a:hover {
-    background-color: #5798B4;
-    color: yellow;
-    cursor: pointer;
-  }
-  
-  /* Submenu Styling */
-  .hidden-menu {
-    display: none; /* Hide submenu by default */
-    list-style: none;
-    position: absolute;
-    top: 100%; /* Position below the parent */
-    left: 0;
-    background-color: #624d4d;
-    border-radius: 5px;
-    padding: 6px 0;
-    z-index: 5;
-    min-width: 80%;
-  }
-  
-  #menu li:hover .hidden-menu {
-    display: block; /* Show on hover */
-  }
-  
-  #menu > li:hover,
-    .hidden-menu li:hover {
-        background-color: #624d4d;
-  }
-
-  /* Submenu item styling */
-  .hidden-menu li {
-    width: 80%; /* Define width for submenu */
-    text-align: left;
-    padding: 5px 5px; /* Optional padding for readability */
-    white-space: nowrap; /* Prevent text wrapping */
-  }
-  
-  .hidden-menu a {
-    background-color:#624d4d !important;
-    color: white;
-    padding: 3px 5px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .hidden-menu a:hover {
-    background-color: #5798B4 !important;
-    color: yellow;
-  }
-  
-  /* Disabled link styles */
-  .disabled {
-    pointer-events: none;
-    opacity: 0.8;
-    background-color: #808080 !important;
-  }
-  /* Responsive Layout for Smaller Screens */
-@media (max-width: 768px) {
-  #banner {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  /* Show menu icon for mobile */
-  .menu-icon {
-      display: block;
-  }
-
-  /* Hide menu initially */
-  #menu {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-  }
-
-  /* Toggle menu display when checkbox is checked */
-  #menu-toggle:checked + label + nav #menu {
-      display: flex;
-  }
-  #menu > li {
-    width: 100%;
-    text-align: center;
+.misc {
+  background-image: url('/Images/DaWiz-Banner.jpg'); /* Path to your image */
+  background-size: 75%; /* Ensures the image covers the entire banner area */
+  background-repeat: no-repeat;
+  background-position: top center; /* Aligns the image to the top center */
+  height: 130px; /* Set a fixed height for the banner */
 }
 
+/* Title Styling */
+.title {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 72px;
+  color: #ffd700;
+  margin-bottom: 5px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); /* Adds shadow for contrast */
+}
+
+/* Top-level menu styling */
+#menu {
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 5px;
+  display: flex;
+  gap: 5px;
+  z-index: 5;
+}
+
+
+/* Menu Item Styling */
+#menu > li {
+  position: relative;
+  padding: 5px;
+}
+
+/* Main Menu Text */
+.menu-item {
+  text-align: center;
+  line-height: 1.1;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;   
+  border-radius: 5px; /* Rounds corners of the background */
+  margin: 0; /* Adds space between menu items */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for contrast */
+
+}
+
+/* First-level submenu styling */
 .hidden-menu {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: 100%;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 5px 0;
+  background-color: #335580; /* Lighter shade of banner color */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  margin-left: 20px;
+  z-index: 10;
 }
+
+/* Show first-level submenu on hover */
+#menu > li:hover .hidden-menu {
+  display: block;
 }
-  
+
+/* Submenu text styling */
+.hidden-menu li a, .hidden-submenu li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  display: block;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+/* Second-level submenu styling */
+.hidden-submenu {
+  display: none;
+  position: absolute;
+  top: 0;       /* Offset slightly down */
+  left: 100%; 
+  list-style: none;
+  padding: 5px 0;
+  background-color: #4D749F; /* Even lighter shade of the hidden-menu color */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  z-index: 20;
+}
+
+/* Show second-level submenu on hover */
+.hidden-menu li:hover .hidden-submenu {
+  display: block;
+}
+
+/* Hover effect for first-level submenu items */
+.hidden-menu li a:hover {
+  background-color: #4D749F;
+  color: white;
+}
+
+/* Hover effect for second-level submenu (.hidden-submenu) items */
+.hidden-submenu li a:hover {
+  background-color: #6699CC;  /* Different shade to distinguish */
+  color: white;
+}
+
+/* Ensure both submenus stay open on hover for smoother navigation */
+#menu li:hover > .hidden-menu,
+.hidden-menu li:hover > .hidden-submenu {
+  display: block;
+}
+/* Specific positioning adjustments to avoid overlap */
+.hidden-menu > li {
+  position: relative;  /* Needed to contain absolute positioning of submenus */
+}
+
+.disabled{
+  pointer-events: none;
+  opacity: 0.8;
+  background-color: #808080 !important;
+}
