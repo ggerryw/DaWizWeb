@@ -155,6 +155,7 @@
 .span-2C {grid-column: span 2;} 
 .span-6C {grid-column: span 6;}
 .span-10C {grid-column: span 10;}
+.span-13C {grid-column: span 13;}
 
 .rowC1{background: powderblue ; color:black;}
 .rowC0{background: #e5ebff;}
