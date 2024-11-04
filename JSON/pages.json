@@ -4,5 +4,6 @@
     "14dayroll": "Content/Standings/14dayroll.html",
     "overnight": "Content/Standings/overnight.html",
     "moneyThisYear": "Content/Standings/moneyThisYear.html",
-    "moneyLastYear": "Content/Standings/moneyLastYear.html"
+    "moneyLastYear": "Content/Standings/moneyLastYear.html",
+    "owner1": "Content/OwnersTeams/owner1.html"
 }
