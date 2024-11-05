@@ -11,33 +11,24 @@
   padding: 10px;
   box-sizing: border-box;
   overflow: hidden; /* Prevents outer scroll */
+  grid-row-gap: 1.5px;
+  grid-column-gap: 3px;
+  box-shadow: 6px 10px 10px 3px rgba(0,0,0,0.6);
+  transition: 0.3s;
+  border-radius: 10px;
+  padding: 3px;
+  max-height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 10px;
 }
-
-.card10{
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-row-gap: 1.5px;
-    grid-column-gap: 3px;
-    grid-auto-rows: 3vh;
-    box-shadow: 6px 10px 10px 3px rgba(0,0,0,0.6);
-    transition: 0.3s;
-    border-radius: 10px;
-    padding: 3px;
-    max-height: 100%;
-    overflow-y: auto;
-    box-sizing: border-box;
-    padding: 10px;
-  }
     
 .card--crumpled {
   background-image: url("https://images.pexels.com/photos/8823335/pexels-photo-8823335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
   background-size: cover !important;
   background-repeat: no-repeat !important; 
-
 }
-.card10--header{
-  display: flex;
-  grid-column: 1 / span 10;
+.card--header{
   font-family: "Calibri";
   font-size: clamp(1rem, 2vw, 2rem);
   color: #0e4fc7;/*ford grabber blue*/
@@ -46,60 +37,42 @@
   margin: 10px;  
   justify-content: left;
   align-items: center;
+}
+
+.card10{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+.card10--HSpan{
+  display: flex;
+  grid-column: 1 / span 10;
+
  }
 .card11{
     display: grid;
     grid-template-columns: 2fr repeat(9, 1fr);
-    grid-row-gap: 1.5px;
-    grid-column-gap: 3px;
-    grid-auto-rows: 3vh;
-    box-shadow: 6px 10px 10px 3px rgba(0,0,0,0.6);
-    transition: 0.3s;
-    border-radius: 10px;
-    padding: 3px;
-    font-size: clamp(1rem, 1vw, 1rem);
-    max-height: 75%;
-    overflow-y: auto;
-    box-sizing: border-box;
-    padding: 10px;
 }
-.card11--header{
+.card11--HSpan{
   display: flex;
   grid-column: 1 / span 11;
-  grid-row: 1 / span 1;
-  font-family: "Calibri";
-  font-size: clamp(1rem, 1vw, 1rem);
-  color: #0e4fc7;/*ford grabber blue*/
-  margin: 3px;  
-  justify-content: left;
-  align-items: center;
+
+}
+.card15{
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr 4fr repeat(10,1fr);
+  width: 8%;
+}
+.card15--HSpan{
+  display: flex;
+  grid-column: 1 / span 15;
 }
 .card16{
   display: grid;
-  grid-template-columns: .5fr 1fr .5fr 5fr .5fr .5fr 1fr .4fr .4fr .5fr .5fr .8fr .8fr .8fr .5fr .5fr;
-  grid-row-gap: 3px;
-  grid-column-gap: 3px;
-  grid-auto-rows: 3vh;
-  box-shadow: 6px 10px 10px 3px rgba(0,0,0,0.6);
-  transition: 0.3s;
-  border-radius: 10px;
-  padding: 3px;
-  font-size: clamp(.8rem, 1vw, 1rem);
-  max-height: 90%;
-  overflow-y: auto;
-  box-sizing: border-box;
-  padding: 10px;
+  grid-template-columns: .5fr 1fr .5fr .5fr 5fr .5fr 1fr .4fr .4fr .5fr .5fr .8fr .8fr .8fr .5fr .5fr;
 }
-.card16--header{
-  display: grid;
+.card16--HSpan{
+  display: flex;
   grid-column: 1 / span 16;
-  grid-row: 1 / span 2;
-  font-family: "Calibri";
-  font-size: clamp(.8rem, 2vw, 3rem);
-  color: #0e4fc7;/*ford grabber blue*/
-  margin: 3px;  
-  justify-content: left;
-  align-items: center;
 }
 .cardTitles {
   font-family: "Calibri" !important;
@@ -113,6 +86,7 @@
 .item{
   font-family: "Calibri";
   display: flex;
+  line-height: 1.25rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -122,6 +96,7 @@
 }
 .itemH{
   box-sizing: border-box;
+  line-height: 1.25rem;
   background-color: rgba(36, 97, 117, 0.5);
   color: yellow !important;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 1) ;
