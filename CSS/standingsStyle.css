@@ -34,7 +34,15 @@
   justify-content: left;
   align-items: center;
 }
-
+.card7{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.card7--HSpan{
+  display: grid;
+  grid-column: 1 / span 7;
+  font-size: clamp(.9rem, 2vw, 2rem);
+ }
 .card10{
   display: grid;
   grid-template-columns: repeat(10, 1fr);
