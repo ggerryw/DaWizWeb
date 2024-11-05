@@ -48,15 +48,10 @@
     display: grid;
     grid-template-columns: 3fr repeat(9, 1fr);
 }
-.card11--HSpan{
-  display: flex;
-  grid-column: 1 / span 11;
-
-}
 .card15{
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 1fr 4fr repeat(10,1fr);
-  width: 8%;
+  width: 80%;
 }
 .card15--HSpan{
   display: flex;
@@ -64,7 +59,7 @@
 }
 .card16{
   display: grid;
-  grid-template-columns: .5fr 1fr .5fr .5fr 5fr .5fr 1fr .4fr .4fr .5fr .5fr .8fr .8fr .8fr .5fr .5fr;
+  grid-template-columns: 1fr 2fr 1fr 6fr repeat(8,1fr);
 }
 .card16--HSpan{
   display: flex;
