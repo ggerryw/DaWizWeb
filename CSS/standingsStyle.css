@@ -3,24 +3,18 @@
 
 /* Card styling */
 .card {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  width: clamp(700px 100vw 80%);
   height: 90%; /* Full height of .mDisp */
-  padding: 10px;
-  box-sizing: border-box;
   overflow: hidden; /* Prevents outer scroll */
-  grid-row-gap: 1.5px;
-  grid-column-gap: 3px;
+  row-gap: 1px;
+  column-gap: 3px;
   box-shadow: 6px 10px 10px 3px rgba(0,0,0,0.6);
   transition: 0.3s;
   border-radius: 10px;
-  padding: 3px;
   max-height: 100%;
   overflow-y: auto;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 5px;
 }
     
 .card--crumpled {
@@ -32,9 +26,11 @@
   font-family: "Calibri";
   font-size: clamp(1rem, 2vw, 2rem);
   color: #0e4fc7;/*ford grabber blue*/
+  row-gap: 0;
   text-align: left;
   /*padding: 2px 10px 5% 10px;  top right  bottom left*/
-  margin: 10px;  
+  margin: 0;  
+  padding: 0;
   justify-content: left;
   align-items: center;
 }
@@ -44,9 +40,9 @@
   grid-template-columns: repeat(10, 1fr);
 }
 .card10--HSpan{
-  display: flex;
+  display: grid;
   grid-column: 1 / span 10;
-
+  font-size: clamp(.9rem, 2vw, 2rem);
  }
 .card11{
     display: grid;
@@ -83,6 +79,11 @@
   align-items: center;
   text-align: center;
 }
+.span-2R {grid-row: span 2;}
+.span-2C {grid-column: span 2;} 
+.span-6C {grid-column: span 6;}
+.span-10C {grid-column: span 10;}
+.span-13C {grid-column: span 13;}
 .item{
   font-family: "Calibri";
   display: flex;
@@ -135,11 +136,7 @@
 
 .dat01{grid-column: 1 / span 2;}
 
-.span-2R {grid-row: span 2;}
-.span-2C {grid-column: span 2;} 
-.span-6C {grid-column: span 6;}
-.span-10C {grid-column: span 10;}
-.span-13C {grid-column: span 13;}
+
 
 .rowC1{background: powderblue ; color:black;}
 .rowC0{background: #e5ebff;}
