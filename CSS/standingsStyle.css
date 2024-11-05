@@ -44,9 +44,9 @@
   grid-column: 1 / span 10;
   font-size: clamp(.9rem, 2vw, 2rem);
  }
-.card11{
+.card10On{
     display: grid;
-    grid-template-columns: 2fr repeat(9, 1fr);
+    grid-template-columns: 3fr repeat(9, 1fr);
 }
 .card11--HSpan{
   display: flex;
