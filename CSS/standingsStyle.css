@@ -37,6 +37,7 @@
 .card7{
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  width: clamp(760px 1vw 1200px);
 }
 .card7--HSpan{
   display: grid;
