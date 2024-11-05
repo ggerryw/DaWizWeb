@@ -7,7 +7,7 @@
   height: 90%; /* Full height of .mDisp */
   overflow: hidden; /* Prevents outer scroll */
   row-gap: 1px;
-  column-gap: 3px;
+  column-gap: 2px;
   box-shadow: 6px 10px 10px 3px rgba(0,0,0,0.6);
   transition: 0.3s;
   border-radius: 10px;
