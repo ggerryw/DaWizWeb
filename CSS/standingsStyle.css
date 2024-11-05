@@ -51,10 +51,9 @@
 .card15{
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 1fr 4fr repeat(10,1fr);
-  width: 80%;
 }
 .card15--HSpan{
-  display: flex;
+  display: grid;
   grid-column: 1 / span 15;
 }
 .card16{
@@ -62,7 +61,7 @@
   grid-template-columns: 1fr 2fr 1fr 6fr repeat(8,1fr);
 }
 .card16--HSpan{
-  display: flex;
+  display: grid;
   grid-column: 1 / span 16;
 }
 .cardTitles {
@@ -121,7 +120,7 @@
   font-size: clamp(.65rem, 1.5vw, 2rem);
 }
 .bbOn{
-  border-bottom: 1px dotted rgb(71, 71, 71);
+  border-bottom: 2px solid rgb(34, 34, 34);
 }
 .bbOff{
   border-bottom: 0px;
