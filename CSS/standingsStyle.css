@@ -22,7 +22,7 @@
   background-size: cover !important;
   background-repeat: no-repeat !important; 
 }
-.card--header{
+.card--header {
   font-family: "Calibri";
   font-size: clamp(1rem, 2vw, 2rem);
   color: #0e4fc7;/*ford grabber blue*/
@@ -34,21 +34,21 @@
   justify-content: left;
   align-items: center;
 }
-.card7{
+.card7 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  width: clamp(760px 1vw 1200px);
 }
-.card7--HSpan{
+.card7--HSpan {
   display: grid;
   grid-column: 1 / span 7;
   font-size: clamp(.9rem, 2vw, 2rem);
  }
-.card10{
+
+.card10 {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
 }
-.card10--HSpan{
+.card10--HSpan {
   display: grid;
   grid-column: 1 / span 10;
   font-size: clamp(.9rem, 2vw, 2rem);
@@ -87,6 +87,7 @@
 .span-6C {grid-column: span 6;}
 .span-10C {grid-column: span 10;}
 .span-13C {grid-column: span 13;}
+
 .item{
   font-family: "Calibri";
   display: flex;
@@ -100,7 +101,7 @@
 }
 .itemH{
   box-sizing: border-box;
-  line-height: 1.25rem;
+  line-height: 1.2  ;
   background-color: rgba(36, 97, 117, 0.5);
   color: yellow !important;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 1) ;
@@ -109,7 +110,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: clamp(.45rem, .8vw, 1rem);
+  font-size: clamp(.45rem, .9vw, 1rem);
   position:sticky;
   top: 0px;
   z-index: 2;
