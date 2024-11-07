@@ -22,7 +22,7 @@
 /* Title Styling */
 .title {
   font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive;
-  font-size: 60px;
+  font-size: clamp(16px, 4vw + 1rem, 60px);
   color: #ffd700;
   margin-bottom: 5px;
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); /* Adds shadow for contrast */
@@ -33,6 +33,7 @@
   list-style: none;
   justify-content: center;
   align-items: center;
+  font-size: clamp(12px, 1vw, 18px);
   padding: 0;
   margin: 5px;
   display: flex;
@@ -51,8 +52,7 @@
 .menu-item {
   text-align: center;
   line-height: 1.1;
-  font-size: 14px;
-  color: white;
+   color: white;
   text-decoration: none;   
   border-radius: 5px; /* Rounds corners of the background */
   margin: 0; /* Adds space between menu items */
@@ -104,7 +104,7 @@
   padding: 5px 0;
   background-color: #4D749F; /* Even lighter shade of the hidden-menu color */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  min-width: 150px;
+  min-width: 120px;
   z-index: 20;
 }
 .hs-left { 
