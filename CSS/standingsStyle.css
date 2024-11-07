@@ -57,6 +57,15 @@
     display: grid;
     grid-template-columns: 3fr repeat(9, 1fr);
 }
+.card12 {
+  display: grid;
+  grid-template-columns: 4fr repeat(11, 1fr);
+}
+.card12--HSpan {
+  display: grid;
+  grid-column: 1 / span 12;
+  font-size: clamp(.9rem, 2vw, 2rem);
+ }
 .card15{
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 1fr 4fr repeat(10,1fr);
@@ -87,6 +96,11 @@
 .span-6C {grid-column: span 6;}
 .span-10C {grid-column: span 10;}
 .span-13C {grid-column: span 13;}
+
+.redCost{
+  color: red !important;
+  font-weight: 900;
+}
 
 .item{
   font-family: "Calibri";
