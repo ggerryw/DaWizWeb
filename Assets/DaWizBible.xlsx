@@ -1,23 +1,33 @@
 {
   "error": {
     "code": 403,
-    "message": "Request had insufficient authentication scopes.",
+    "message": "Google Drive API has not been used in project 747068139604 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/drive.googleapis.com/overview?project=747068139604 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.",
     "errors": [
       {
-        "message": "Insufficient Permission",
-        "domain": "global",
-        "reason": "insufficientPermissions"
+        "message": "Google Drive API has not been used in project 747068139604 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/drive.googleapis.com/overview?project=747068139604 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.",
+        "domain": "usageLimits",
+        "reason": "accessNotConfigured",
+        "extendedHelp": "https://console.developers.google.com"
       }
     ],
     "status": "PERMISSION_DENIED",
     "details": [
       {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Google developers console API activation",
+            "url": "https://console.developers.google.com/apis/api/drive.googleapis.com/overview?project=747068139604"
+          }
+        ]
+      },
+      {
         "@type": "type.googleapis.com/google.rpc.ErrorInfo",
-        "reason": "ACCESS_TOKEN_SCOPE_INSUFFICIENT",
+        "reason": "SERVICE_DISABLED",
         "domain": "googleapis.com",
         "metadata": {
           "service": "drive.googleapis.com",
-          "method": "google.apps.drive.v3.DriveFiles.Export"
+          "consumer": "projects/747068139604"
         }
       }
     ]
