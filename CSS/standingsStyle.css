@@ -87,6 +87,7 @@
 .card16--HSpan{
   display: grid;
   grid-column: 1 / span 16;
+  overflow-y: scroll; 
 }
 .card21{
   display: grid;
@@ -97,10 +98,14 @@
   grid-column: 1 / span 21;
 }
 .rules{
-  display: grid;
-  grid-template-columns: 1fr;
-  place-items: center;
-  width: clamp(100%, 1vw, 75%);
+  display: flex;
+  align-items: center;
+  max-width: 75%
+  }
+.cardRules{
+  display: flex;
+  overflow: scroll;
+  max-height: 60%;
 
 }
 .cardT{
@@ -161,24 +166,10 @@
   opacity: 1;
 }
 .itemC {
-  font-family: "Calibri";
-  background-color: rgba(36, 97, 117, 0.5);
-  color: yellow;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 26px;
-   opacity: 1;
+
 }
 .itemCH {
-  font-family: "Calibri";
-  padding-left: 75px;
-  padding-right: 75px;
-  justify-content: left;
-  align-items: left;
-  text-align: left;
-  font-size: 20px;
-   opacity: 1;
+
 }
 .itemBench {
   box-sizing: border-box;
