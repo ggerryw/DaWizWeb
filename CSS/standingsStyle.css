@@ -88,6 +88,14 @@
   display: grid;
   grid-column: 1 / span 16;
 }
+.card22{
+  display: grid;
+  grid-template-columns: repeat(22,1fr);
+}
+.card22--HSpan{
+  display: grid;
+  grid-column: 1 / span 22;
+}
 .rules{
   display: grid;
   grid-template-columns: 1fr;
