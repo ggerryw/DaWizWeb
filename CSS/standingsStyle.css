@@ -88,13 +88,13 @@
   display: grid;
   grid-column: 1 / span 16;
 }
-.card22{
+.card20{
   display: grid;
-  grid-template-columns: repeat(22,1fr);
+  grid-template-columns: repeat(20,1fr);
 }
-.card22--HSpan{
+.card20--HSpan{
   display: grid;
-  grid-column: 1 / span 22;
+  grid-column: 1 / span 20;
 }
 .rules{
   display: grid;
