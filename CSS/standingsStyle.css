@@ -90,7 +90,7 @@
 }
 .card20{
   display: grid;
-  grid-template-columns: repeat(20,1fr);
+  grid-template-columns: 2fr 6fr repeat(12,1fr);
 }
 .card20--HSpan{
   display: grid;
