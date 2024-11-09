@@ -88,6 +88,22 @@
   display: grid;
   grid-column: 1 / span 16;
 }
+.rules{
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  width: clamp(100%, 1vw, 75%);
+
+}
+.cardT{
+  /* Add shadows to create the "card" effect */
+  box-shadow: 6px 10px 10px 3px rgba(0,0,0,0.6);
+  transition: 0.3s;
+  margin: 0px 20px 5px 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border-bottom: 20px;
+}
 .cardTitles {
   font-family: "Calibri" !important;
   box-sizing: border-box;
@@ -136,6 +152,28 @@
   z-index: 2;
   opacity: 1;
 }
+.itemC {
+  font-family: "Calibri";
+  background-color: rgba(36, 97, 117, 0.5);
+  color: yellow;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 26px;
+   opacity: 1;
+}
+.itemCH {
+  font-family: "Calibri";
+  padding-left: 75px;
+  padding-right: 75px;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  font-size: 20px;
+   opacity: 1;
+}
+
+
 .opac0{
   opacity: 0;
 }
