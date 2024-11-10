@@ -100,7 +100,7 @@
 .rules{
   display: flex;
   align-items: center;
-  max-width: 75%
+  max-width: 75%;
   }
 .cardRules{
   display: flex;
@@ -166,10 +166,11 @@
   opacity: 1;
 }
 .itemC {
+  display: flex;
 
 }
 .itemCH {
-
+  display: flex;
 }
 .itemBench {
   box-sizing: border-box;
