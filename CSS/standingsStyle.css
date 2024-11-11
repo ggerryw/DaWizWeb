@@ -276,10 +276,10 @@
 
 .blnk{grid-column: 1 / span 9; background-color: white; height: 10px;}
 
-.tBA{background-color:#fff3f3;color:black;font-weight: 400;}
-.tLo{background-color: #fff3f3;color:black;font-weight: 400;text-shadow: 3px 3px 6px rgba(235, 52, 79, 1);}
-.tAA{background-color:#F2FDEC;color:black;font-weight: 400;}
-.tHi{background-color:#F2FDEC;color:#2b6be4;color:black;font-weight: 400;text-shadow: 3px 3px 6px rgba(79, 235, 52, 1);}
+.tBA{background-color:#fedede;color:black;font-weight: 400;}
+.tLo{background-color: #fedede;color:black;font-weight: 400;text-shadow: 3px 3px 6px rgba(235, 52, 79, 1);}
+.tAA{background-color:#e3fdd5;color:black;font-weight: 400;}
+.tHi{background-color:#e3fdd5;color:#2b6be4;color:black;font-weight: 400;text-shadow: 3px 3px 6px rgba(79, 235, 52, 1);}
 .tStart{border-left: thin solid lightgray;}
 .tNorm{background-color:#fff;color:black;font-weight: 400;}
 
