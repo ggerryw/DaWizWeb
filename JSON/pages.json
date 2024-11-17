@@ -69,5 +69,11 @@
     "SJS": "Content/NHLTeams/SJS.html",
     "SEA": "Content/NHLTeams/SEA.html",
     "VAN": "Content/NHLTeams/VAN.html",
-    "VGK": "Content/NHLTeams/VGK.html"
+    "VGK": "Content/NHLTeams/VGK.html",
+    "a145":"https://www.nhl.com",
+    "a146":"https://sports.yahoo.com/nhl/",
+    "a147":"https://www.espn.com/nhl/injuries",
+    "a148":"https://www.nhl.com/news/",
+    "a149":"https://nhlrumors.com",
+    "a150":"https://thehockeywriters.com/latest-nhl-rumors/"
 }

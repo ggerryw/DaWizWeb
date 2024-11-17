@@ -58,16 +58,31 @@
                         downloadFile('/Assets/DaWizBible.xlsx'); // Update the path to your file
            
                     } else if (pages[pageId]) {
-                        fetch(pages[pageId])
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById("container").innerHTML = data;
-                            })
-                            .catch(error => console.error("Error loading content:", error));
+
+                            const targetURL = pages[pageId];
+
+                            if (isExternalLink(targetURL)) {
+                                // If it's an external link, navigate to it
+                                window.open(targetURL, "_blank"); // Open in a new tab (optional)
+                            } else {
+                                // If it's an internal link, fetch and display the content
+                                fetch(targetURL)
+                                    .then(response => response.text())
+                                    .then(data => {
+                                        document.getElementById("container").innerHTML = data;
+                                    })
+                                    .catch(error => console.error("Error loading internal content:", error));
+                            }
+
                     }
                 });
             });
         }
+        // Helper function to check if a URL is external
+        function isExternalLink(url) {
+            return url && (url.startsWith('http') || url.startsWith('www'));
+        }
+        
         // Function to trigger file download
         function downloadFile(url) {
             fetch(url)
