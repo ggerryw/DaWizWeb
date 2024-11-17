@@ -95,7 +95,7 @@
 .card16--HSpan{
   display: grid;
   grid-column: 1 / span 16;
-  overflow-y: scroll; 
+
 }
 .card21{
   display: grid;
