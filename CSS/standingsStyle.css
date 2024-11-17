@@ -72,6 +72,14 @@
   grid-column: 1 / span 12;
   font-size: clamp(.9rem, 2vw, 2rem);
  }
+ .card13{
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 4fr repeat(9,1fr);
+}
+.card13--HSpan{
+  display: grid;
+  grid-column: 1 / span 13;
+}
 .card15{
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 1fr 4fr repeat(10,1fr);
