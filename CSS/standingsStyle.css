@@ -82,7 +82,7 @@
 }
 .card15{
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr 4fr repeat(10,1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr 3fr repeat(10,1fr);
 }
 .card15--HSpan{
   display: grid;
@@ -262,7 +262,6 @@
 .bonw {
   background: white;
   color: black;
-  font-size: clamp(.65rem, 1.5vw, 2rem);
 }
 .bbOn{
   border-bottom: 2px solid rgb(34, 34, 34);
