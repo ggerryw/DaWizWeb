@@ -10,7 +10,7 @@
     "benches":"Content/OtherStuff/benches.html",
     "bible":"Content/OtherStuff/bible.html",
     "rules":"Content/OtherStuff/rules.html",
-    "gamesplayed":"Content/Standings/.html",
+    "gamesplayed":"Content/Standings/gamesplayed.html",
     "goals":"Content/Standings/goals.html",
     "assists":"Content/Standings/assists.html",
     "ppg":"Content/Standings/ppg.html",
