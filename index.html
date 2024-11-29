@@ -29,7 +29,8 @@
                 setupMenuEventListeners();
             })
             .catch(error => console.error("Error loading menu:", error));
-        // Load the pages mapping from pages.json
+        
+            // Load the pages mapping from pages.json
         let pages = {};
         fetch("Json/pages.json")
             .then(response => response.json())
@@ -46,38 +47,7 @@
             })
             .catch(error => console.error("Error loading standings:", error));
 
-        // Set up click event listeners for menu items after menu is loaded
-        function setupMenuEventListeners() {
-            document.querySelectorAll("#menu-container a").forEach(item => {
-                item.addEventListener("click", event => {
-                    event.preventDefault();
-                    const pageId = event.target.id;
-
-                    if (pageId === "bible") {
-                    // If the item is for downloading a file
-                        downloadFile('/Assets/DaWizBible.xlsx'); // Update the path to your file
-           
-                    } else if (pages[pageId]) {
-
-                            const targetURL = pages[pageId];
-
-                            if (isExternalLink(targetURL)) {
-                                // If it's an external link, navigate to it
-                                window.open(targetURL, "_blank"); // Open in a new tab (optional)
-                            } else {
-                                // If it's an internal link, fetch and display the content
-                                fetch(targetURL)
-                                    .then(response => response.text())
-                                    .then(data => {
-                                        document.getElementById("container").innerHTML = data;
-                                    })
-                                    .catch(error => console.error("Error loading internal content:", error));
-                            }
-
-                    }
-                });
-            });
-        }
+ 
         // Helper function to check if a URL is external
         function isExternalLink(url) {
             return url && (url.startsWith('http') || url.startsWith('www'));
@@ -100,9 +70,11 @@
                 })
                 .catch(error => console.error("Error downloading file:", error));
         }
-
+        >
 
     </script>
+    // Set up click event listeners for menu items after menu is loaded
+    <script src="JS/eventListener.js"></script     
     
 </body>
 </html>
