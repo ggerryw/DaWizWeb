@@ -1,4 +1,4 @@
-const tpgpppgData = {
+{
   "tpgpppg": {
       "categories": ["Luke", "Gerry", "Luc", "Leon"],
       "series": [
@@ -7,5 +7,4 @@ const tpgpppgData = {
           { "y": [0.77, 0.76, 0.72, 0.75], "type": "scatter", "name": "PPG" }
       ]
   }
-};
-  
+}
