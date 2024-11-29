@@ -21,7 +21,7 @@
     
     <script>
 
-        // Load the menu structure from menu.html
+            // Load the menu structure from menu.html
         fetch("Content/Menu/Menu.html")
             .then(response => response.text())
             .then(menuHTML => {
@@ -39,7 +39,7 @@
             })
             .catch(error => console.error("Error loading pages mapping:", error));
 
-        // Fetch and insert the standings content
+            // Fetch and insert the standings content
         fetch("Content/Standings/standings.html")
             .then(response => response.text())
             .then(data => {
@@ -47,34 +47,14 @@
             })
             .catch(error => console.error("Error loading standings:", error));
 
- 
-        // Helper function to check if a URL is external
-        function isExternalLink(url) {
-            return url && (url.startsWith('http') || url.startsWith('www'));
-        }
-        
-        // Function to trigger file download
-        function downloadFile(url) {
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) throw new Error("Network response was not ok.");
-                    return response.blob();
-                })
-                .then(blob => {
-                    const link = document.createElement('a');
-                    link.href = URL.createObjectURL(blob);
-                    link.download = url.split('/').pop(); // Extract filename from URL
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                })
-                .catch(error => console.error("Error downloading file:", error));
-        }
-        >
-
     </script>
-    // Set up click event listeners for menu items after menu is loaded
-    <script src="JS/eventListener.js"></script     
+    
+            // Set up click event listeners for menu items after menu is loaded
+    <script src="JS/eventListener.js"></script> 
+            // Helper function to check if a URL is external    
+    <script src="JS/externalLink.js"></script>    
+            // Function to trigger file download 
+    <script src="JS/downloadFile.js"></script>     
     
 </body>
 </html>
