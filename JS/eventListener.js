@@ -13,7 +13,8 @@
                     } else if (pages[pageId]?.startsWith("chart:")) {
                         // Render the chart dynamically
                         const chartType = pages[pageId].split(":")[1]; // e.g., "tpgpppg"
-                        renderChart(chartType); // Dynamically render the chart
+                        if (chartType == "tpgpppg"){
+                        renderChart3(chartType);} // Dynamically render the chart
                 
                     } else if (pages[pageId]) {
 
