@@ -1,6 +1,4 @@
-       // Set up click event listeners for menu items after menu is loaded
-
-       function setupMenuEventListeners() {
+    function setupMenuEventListeners() {
         document.querySelectorAll("#menu-container a").forEach(item => {
             item.addEventListener("click", event => {
                 event.preventDefault();
