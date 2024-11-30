@@ -1,6 +1,6 @@
 function renderChart3(chartType) {
     const container = document.getElementById('container');
-    container.innerHTML = 'so far - so good'; // Clear previous content
+    container.innerHTML = 'plotly link added'; // Clear previous content
 
     // Add a chart div
     const chartDiv = document.createElement('div');
