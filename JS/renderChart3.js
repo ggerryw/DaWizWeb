@@ -1,11 +1,11 @@
 function renderChart3(chartType) {
     const container = document.getElementById('container');
-    container.innerHTML = 'plotly link added'; // Clear previous content
+    container.innerHTML = 'width 80%'; // Clear previous content
 
     // Add a chart div
     const chartDiv = document.createElement('div');
     chartDiv.id = 'chart';
-    chartDiv.style.width = '100%';
+    chartDiv.style.width = '80%';
     chartDiv.style.height = '600px';
     container.appendChild(chartDiv);
 
