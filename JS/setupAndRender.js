@@ -8,8 +8,12 @@ function renderChart(data) {
     chartDiv.style.height = '500px';
     container.appendChild(chartDiv);
 
-  const tpData = data.series.find((series) => series.name === 'TP').data;
-  const gpData = data.series.find((series) => series.name === 'GP').data;
+  //const tpData = data.series.find((series) => series.name === 'TP').data;
+  //const gpData = data.series.find((series) => series.name === 'GP').data;
+    // Retrieve TP and GP data
+    const tpData = data.data.TP; // Access the 'TP' array
+    const gpData = data.data.GP; // Access the 'GP' array
+
     // Calculate minimum and maximum for y-axis
   const combinedMin = Math.min(...tpData, ...gpData);
   const combinedMax = Math.max(...tpData, ...gpData);
