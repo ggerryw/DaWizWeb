@@ -5,7 +5,7 @@ function renderChart(data) {
   const chartDiv = document.createElement('div');
     chartDiv.id = 'chart';
     chartDiv.style.width = '80%';
-    chartDiv.style.height = '500px';
+    chartDiv.style.height = '80%';
     container.appendChild(chartDiv);
 
   //const tpData = data.series.find((series) => series.name === 'TP').data;
