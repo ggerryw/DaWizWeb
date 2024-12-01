@@ -1,3 +1,15 @@
+function renderChartWithData(type) {
+    fetchData('./JSON/data.json')
+      .then((data) => {
+            if(type=='tpgpppg'){   
+                renderChart(data); // Pass the fetched data to the chart rendering function
+            }
+        })
+      .catch((error) => {
+        console.error("Error rendering chart:", error);
+      });
+  }
+
 function fetchData(url) {
     return fetch(url)
       .then((response) => {
@@ -12,13 +24,5 @@ function fetchData(url) {
       });
   }
   
-  function renderChartWithData() {
-    fetchData('./JSON/data.json')
-      .then((data) => {
-        renderChart(data); // Pass the fetched data to the chart rendering function
-      })
-      .catch((error) => {
-        console.error("Error rendering chart:", error);
-      });
-  }
+
   

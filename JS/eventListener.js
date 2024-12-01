@@ -11,8 +11,7 @@
                     } else if (pages[pageId]?.startsWith("chart:")) {
                         // Render the chart dynamically
                         const chartType = pages[pageId].split(":")[1]; // e.g., "tpgpppg"
-                        if (chartType == "tpgpppg"){
-                            renderChartWithData(chartType);} // Dynamically render the chart
+                        renderChartWithData(chartType);
                 
                     } else if (pages[pageId]) {
 
@@ -31,7 +30,7 @@
                                 .catch(error => console.error("Error loading internal content:", error));
                         }
 
-                }
+                    }   
             });
         });
     }
