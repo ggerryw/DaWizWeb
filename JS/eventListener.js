@@ -12,7 +12,7 @@
                         // Render the chart dynamically
                         const chartType = pages[pageId].split(":")[1]; // e.g., "tpgpppg"
                         if (chartType == "tpgpppg"){
-                        renderChart3(chartType);} // Dynamically render the chart
+                            renderChartWithData(chartType);} // Dynamically render the chart
                 
                     } else if (pages[pageId]) {
 
