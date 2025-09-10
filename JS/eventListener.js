@@ -6,7 +6,7 @@
 
                 if (pageId === "bible") {
                         // If the item is for downloading a file
-                        downloadFile('/Assets/DaWizBible.xlsx'); // Update the path to your file
+                        downloadFile('/Assets/DaWiz Bible 4.0.xlsx'); // Update the path to your file
                 
                     } else if (pages[pageId]?.startsWith("chart:")) {
                         // Render the chart dynamically
