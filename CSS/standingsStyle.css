@@ -88,7 +88,7 @@
   display: grid;
   grid-column: 1 / span 15;
 }
-.card16{
+/*.card16{
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 6fr repeat(8,1fr);
 }
@@ -97,6 +97,59 @@
   grid-column: 1 / span 16;
 
 }
+*/
+/* 1. Use compact explicit column sizing for the 16 grid columns */
+.card16 {
+  display: grid;
+  /* Define specific widths for each of the 16 columns:
+     1: Round (35px), 2: ID (55px), 3: Drop Pick (40px), 4: Player (auto/flexible),
+     5: Age (35px), 6: Pos (35px), 7: Team (35px), 8-12: Stats (35-45px each),
+     13-14: Cost/RM (45px each), 15-16: Night/Tonight (45px each) */
+  grid-template-columns: 
+    38px 58px 45px minmax(140px, 1.8fr) 
+    38px 38px 42px 38px 35px 35px 38px 48px 
+    48px 45px 48px 48px;
+  gap: 1px;
+  max-width: 900px;    /* Prevents the table from stretching across ultra-wide monitors */
+  margin: 0 auto;     /* Centers the card on the page */
+}
+
+/* 2. Tighten up cell padding and height */
+.card16 .itemH,
+.card16 .item {
+  padding: 3px 4px;   /* Significantly reduces vertical row spacing */
+  font-size: 13px;    /* Keeps text clear while compact */
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Left-align player names for a cleaner layout */
+.card16 .item:nth-child(16n + 4) {
+  justify-content: flex-start;
+  padding-left: 6px;
+}
+
+/* 3. Keep team logos compact */
+.card16 .item img {
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+}
+
+/* 4. Streamline Header Bar */
+.card16--HSpan {
+  grid-column: span 16;
+  padding: 6px 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
 .card21{
   display: grid;
   grid-template-columns: 2fr 5fr repeat(19,1fr);
