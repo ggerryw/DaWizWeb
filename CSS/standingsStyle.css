@@ -115,7 +115,6 @@
 }
 
 /* 2. Tighten up cell padding and height */
-.card16 .itemH,
 .card16 .item {
   padding: 3px 4px;   /* Significantly reduces vertical row spacing */
   font-size: 13px;    /* Keeps text clear while compact */
