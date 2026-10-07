@@ -9,6 +9,7 @@
 
 /* Card styling */
 .card {
+  font-family: "Calibri";
   flex-direction: column;
   height: 90%; /* Full height of .mDisp */
   overflow: hidden; /* Prevents outer scroll */
