@@ -249,7 +249,7 @@
 }
 
 .item{
-  font-family: "Calibri";
+  font-family: "Calibri", "Carlito", "Segoe UI", Arial, sans-serif;
   display: flex;
   line-height: 1.25rem;
   justify-content: center;
@@ -259,6 +259,11 @@
   padding: 2px;
   border-radius: 5px;
 }
+.item a {
+  font-family: inherit;
+  color: inherit;
+}
+
 .itemH{
   box-sizing: border-box;
   line-height: 1.2  ;
