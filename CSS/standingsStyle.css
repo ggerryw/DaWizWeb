@@ -31,7 +31,7 @@
 }
 .card--header {
   font-family: "Calibri";
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(.8rem, 1.75vw, 1.6rem);
   color: #0e4fc7;/*ford grabber blue*/
   row-gap: 0;
   text-align: left;
