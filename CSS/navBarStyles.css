@@ -1,0 +1,148 @@
+/* Banner Styling */
+#banner {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-end; /* Align menu to the bottom of the banner */
+  align-items: center; /* Center items horizontally */
+  padding: 5px;
+  color: white; /* Color for the text */
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+} 
+
+.misc {
+  background-image: url('/Images/DaWiz-Banner.jpg'); /* Path to your image */
+  background-size: 75%; /* Ensures the image covers the entire banner area */
+  background-repeat: no-repeat;
+  background-position: top center; /* Aligns the image to the top center */
+  height: 130px; /* Set a fixed height for the banner */
+}
+
+/* Title Styling */
+.title {
+  font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive;
+  font-size: clamp(16px, 4vw + 1rem, 60px);
+  color: #ffd700;
+  margin-bottom: 5px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); /* Adds shadow for contrast */
+}
+
+/* Top-level menu styling */
+#menu {
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(12px, 1vw, 18px);
+  padding: 0;
+  margin: 5px;
+  display: flex;
+  gap: 5px;
+  z-index: 5;
+}
+
+
+/* Menu Item Styling */
+#menu > li {
+  position: relative;
+  padding: 5px;
+}
+
+/* Main Menu Text */
+.menu-item {
+  text-align: center;
+  line-height: 1.1;
+   color: white;
+  text-decoration: none;   
+  border-radius: 5px; /* Rounds corners of the background */
+  margin: 0; /* Adds space between menu items */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for contrast */
+
+}
+
+/* First-level submenu styling */
+.hidden-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  list-style: none;
+  padding: 5px 0;
+  background-color: #335580; /* Lighter shade of banner color */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  margin-left: 20px;
+  z-index: 10;
+}
+.hm-left{ 
+  left: 0;
+}
+.hm-right{ 
+  right: 0;
+}
+
+/* Show first-level submenu on hover */
+#menu > li:hover .hidden-menu {
+  display: block;
+}
+
+/* Submenu text styling */
+.hidden-menu li a, .hidden-submenu li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  display: block;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+/* Second-level submenu styling */
+.hidden-submenu{
+  display: none;
+  position: absolute;
+  top: 0;       /* Offset slightly down */
+  list-style: none;
+  padding: 5px 0;
+  background-color: #4D749F; /* Even lighter shade of the hidden-menu color */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 120px;
+  z-index: 20;
+}
+.hs-left { 
+  left: 100%; 
+}
+.hs-right { 
+  right: 100%; 
+}
+
+/* Show second-level submenu on hover */
+.hidden-menu li:hover .hidden-submenu {
+  display: block;
+}
+
+/* Hover effect for first-level submenu items */
+.hidden-menu li a:hover {
+  background-color: #4D749F;
+  color: white;
+}
+
+/* Hover effect for second-level submenu (.hidden-submenu) items */
+.hidden-submenu li a:hover {
+  background-color: #6699CC;  /* Different shade to distinguish */
+  color: white;
+}
+
+/* Ensure both submenus stay open on hover for smoother navigation */
+#menu li:hover > .hidden-menu,
+.hidden-menu li:hover > .hidden-submenu {
+  display: block;
+}
+/* Specific positioning adjustments to avoid overlap */
+.hidden-menu > li {
+  position: relative;  /* Needed to contain absolute positioning of submenus */
+}
+
+.disabled{
+  pointer-events: none;
+  opacity: 0.8;
+  background-color: #808080 !important;
+}

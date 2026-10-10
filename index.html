@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/css?family=Calibri" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+
+	<link rel="stylesheet" href="CSS/coreStyles.css"> 
+	<link rel="stylesheet" href="CSS/standingsStyle.css"> 
+	<link rel="stylesheet" href="CSS/navBarStyles.css"> 
+		<title>DaWiz Standings</title>
+
+</head>
+	
+<body>
+
+    <div id="menu-container"></div>
+    <div id="container"></div>
+    
+    <script>
+
+            // Load the menu structure from menu.html
+        fetch("Content/Menu/Menu.html")
+            .then(response => response.text())
+            .then(menuHTML => {
+                document.getElementById("menu-container").innerHTML = menuHTML;
+                setupMenuEventListeners();
+            })
+            .catch(error => console.error("Error loading menu:", error));
+        
+            // Load the pages mapping from pages.json
+        let pages = {};
+        fetch("Json/pages.json")
+            .then(response => response.json())
+            .then(data => {
+                pages = data;
+            })
+            .catch(error => console.error("Error loading pages mapping:", error));
+
+            // Fetch and insert the standings content
+        fetch("Content/Standings/standings.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("container").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading standings:", error));
+
+    </script>
+    
+
+    <script src="JS/eventListener.js"></script> 
+
+    <script src="JS/externalLink.js"></script>    
+
+    <script src="JS/downloadFile.js"></script>         
+
+    <script src="JS/chartRender.js"></script>         
+   
+    
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+
+    body{
+        overflow: hidden;
+        background-color: #1155cc;    
+
+    }
+    
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 90vh;
+        width: 100%;
+        padding-top: 20px;
+      }
+
+    .mainDisplay {
+        display: flex;
+        justify-content: center; /* Horizontal centering */
+        width: 100vw;
+        height: calc(100vh - 130px); /* Adjust for the height of the banner */
+        font-size: clamp(1.5rem, 4vw, 3rem);
+        overflow: hidden;
+ 
+    }
+
+    #menu-container{
+        display: flex;
+        justify-content: center; /* Center #nav horizontally */
+        align-items: center;     /* Center #nav vertically if needed */
+    }
